@@ -46,15 +46,32 @@ left: 50%;
 
 <button id="myButton2" onclick="window.location.href='https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=5250&date=&moderator=&teacher=&team='">Нажми меня</button>
 
- <script>
-document.getElementById('myButton').addEventListener('click',function(){
-  ym(99906224,'reachGoal','myButton');
-})
+<button id="myButton3" onclick=>Нажми меня</button>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script>
+  document.getElementById('myButton').addEventListener('click', function() {
+    ym(99906224, 'reachGoal', 'myButton');
+  });
 
-document.getElementById('myButton2').addEventListener('click',function(){
-  ym(99906224,'reachGoal','myButton2')
-})
-</script> 
+  document.getElementById('myButton2').addEventListener('click', function() {
+    ym(99906224, 'reachGoal', 'myButton2');
+  });
+
+  const arr = [
+    "https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=6246&date=&moderator=&teacher=&team=",
+    "https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=5250&date=&moderator=&teacher=&team=",
+    "https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=6210&date=&moderator=&teacher=&team="
+  ];
+  document.getElementById('myButton3').addEventListener('click', function() {
+    myFuncion();
+  });
+  function myFuncion() {
+  let random =_.sample(arr);
+    window.location.href = random;
+  }
+
+ 
+</script>
 
 
    
