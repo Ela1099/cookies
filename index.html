@@ -67,7 +67,13 @@ left: 50%;
 
 <button id="myButton3" onclick=>Нажми меня</button>
      <a class="link" id="link" href='https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=6210&date=&moderator=&teacher=&team=' >Ссылка</a>
-<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<a href="#" id="multiLink" data-urls='[
+"https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=6246&date=&moderator=&teacher=&team=",
+"https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=5250&date=&moderator=&teacher=&team=",
+"https://metabase.foxford.ru/question/21778-obratnaya-svyaz-ot-prepodavatelej-fvs-id-livestreamingteacherfeedbacks?moderator_id=6210&date=&moderator=&teacher=&team="
+  ]'>Click Here</a>
+     
+     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
   document.getElementById('myButton').addEventListener('click', function() {
     ym(99906224, 'reachGoal', 'myButton');
@@ -96,8 +102,7 @@ left: 50%;
   event.preventDefault(); // Предотвращаем переход по '#'
 
   const urls = JSON.parse(this.dataset.urls); // Получаем массив URL из атрибута data-urls
-  const randomIndex = Math.floor(Math.random() * urls.length); // Выбираем случайный индекс
-  window.location.href = urls[randomIndex]; // Перенаправляем на случайный URL
+ myFuncion(urls);
 });
 
 
